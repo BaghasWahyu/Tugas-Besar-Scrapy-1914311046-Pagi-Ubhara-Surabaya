@@ -1,4 +1,7 @@
 import scrapy
+import os
+
+folder = "./Chapter"
 
 
 class NovelSpiderSpider(scrapy.Spider):
@@ -29,6 +32,7 @@ class NovelSpiderSpider(scrapy.Spider):
             "https://www.worldnovel.online/archean-eon-art/chapter-748-the-fate-of-celestial-thearch-myriad-star-final-chapter-of-volume/",
             "https://www.worldnovel.online/archean-eon-art/chapter-747-first-meeting-with-fiend-mountains-owner/",
             "https://www.worldnovel.online/archean-eon-art/chapter-746-the-sound-on-the-mountaintop/",
+            "https://www.worldnovel.online/archean-eon-art/chapter-745-fate/",
             "https://www.worldnovel.online/archean-eon-art/chapter-744-half-step-eighth-eminence-meng-chuan/",
             "https://www.worldnovel.online/archean-eon-art/chapter-743-epiphany/",
             # Chaotic Sword God
@@ -74,7 +78,9 @@ class NovelSpiderSpider(scrapy.Spider):
     def parse(self, response):
         judul = response.url.split("/")[-3]
         chapter = response.url.split("/")[-2]
-        filename = f"{judul}-{chapter}.html"
+        if not os.path.exists(folder):
+            os.makedirs(folder)
+        filename = os.path.join(folder, f"{judul}-{chapter}.html")
         with open(filename, "wb") as f:
             f.write(response.body)
-        self.log(f"Saved file {filename}")
+            self.log(f"Saved file {filename}")
