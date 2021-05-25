@@ -19,9 +19,9 @@ class NovelSpiderSpider(scrapy.Spider):
             "https://www.worldnovel.online/absolute-great-teacher/chapter-619-xuanyuan-po-your-acting-skills-are-so-exaggerated/",
             "https://www.worldnovel.online/absolute-great-teacher/chapter-618-gathering-of-geniuses/",
             "https://www.worldnovel.online/absolute-great-teacher/chapter-617-sun-mos-on-the-spot-guidance/",
-            "https://www.worldnovel.online/absolute-great-teacher/chapter-616-appreciation-of-a-major-character/"
+            "https://www.worldnovel.online/absolute-great-teacher/chapter-616-appreciation-of-a-major-character/",
             # Archean Eon Art
-            "https://www.worldnovel.online/archean-eon-art/chapter-753-treatment",
+            "https://www.worldnovel.online/archean-eon-art/chapter-753-treatment/",
             "https://www.worldnovel.online/archean-eon-art/chapter-752-essence-soul-eighth-tribulation-lifeform/",
             "https://www.worldnovel.online/archean-eon-art/chapter-751-natural-accomplishment/",
             "https://www.worldnovel.online/archean-eon-art/chapter-750-more-than-ten-thousand-years-later/",
